@@ -1,0 +1,133 @@
+.orbit-divider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+  overflow: hidden;
+}
+
+.orbit-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  filter: blur(15px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orbit-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Concentric Rings styling */
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-inner {
+  width: 100px;
+  height: 100px;
+}
+
+.ring-middle {
+  width: 150px;
+  height: 150px;
+}
+
+.ring-outer {
+  width: 200px;
+  height: 200px;
+}
+
+/* Orbiting Glyph Items styling */
+.orbit-glyph {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent);
+  color: var(--accent-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+}
+
+/* Position Glyphs on the rings */
+.glyph-code {
+  top: -12px;
+  left: calc(50% - 12px);
+}
+
+.glyph-terminal {
+  bottom: -12px;
+  left: calc(50% - 12px);
+}
+
+.glyph-db {
+  top: calc(50% - 12px);
+  right: -12px;
+}
+
+/* Center Monogram Badge */
+.orbit-center-badge {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--bg-elevated);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+  z-index: 3;
+}
+
+.badge-text {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+
+.badge-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.3) 0%, transparent 80%);
+  z-index: 1;
+}
+
+/* Support prefers-reduced-motion: freeze rotation */
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring {
+    animation: none !important;
+  }
+}
