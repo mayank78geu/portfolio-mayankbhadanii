@@ -168,3 +168,23 @@
   color: var(--text-muted);
   line-height: 1.6;
 }
+
+/* Light Theme Overrides */
+html[data-theme='light'] .experience-large-card {
+  background: linear-gradient(135deg, rgba(235, 231, 245, 0.6) 0%, rgba(245, 243, 250, 0.9) 100%), var(--card-glass);
+  box-shadow: 0 10px 30px rgba(18, 10, 31, 0.05);
+}
+
+html[data-theme='light'] .experience-header-block {
+  border-bottom-color: var(--card-border);
+}
+
+html[data-theme='light'] .step-icon {
+  background: rgba(18, 10, 31, 0.03);
+}
+
+html[data-theme='light'] .step-item:hover .step-icon {
+  background: rgba(139, 92, 246, 0.1);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.15);
+}
+

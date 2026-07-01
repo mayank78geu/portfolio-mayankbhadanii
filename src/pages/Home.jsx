@@ -183,11 +183,12 @@ const Home = () => {
                 <FaRocket /> View Projects
               </Link>
               <a 
-                href="/resume.pdf" 
-                download="Mayank_Kumar_Resume.pdf"
+                href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
-                <FaDownload /> Download Resume
+                <FaDownload /> View Resume
               </a>
             </motion.div>
 

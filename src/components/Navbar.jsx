@@ -99,10 +99,11 @@ const Navbar = () => {
 
             {/* Resume Download (Desktop only in navbar) */}
             <a 
-              href="/resume.pdf" 
-              download="Mayank_Kumar_Resume.pdf"
+              href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="navbar-resume-btn btn btn-secondary"
-              title="Download Resume PDF"
+              title="View Resume"
             >
               <FaDownload size={12} /> <span>Resume</span>
             </a>
@@ -146,11 +147,12 @@ const Navbar = () => {
               {/* Mobile controls inside drawer */}
               <div className="mobile-drawer-controls">
                 <a 
-                  href="/resume.pdf" 
-                  download="Mayank_Kumar_Resume.pdf" 
+                  href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mobile-resume-btn btn btn-primary"
                 >
-                  <FaDownload /> Download Resume
+                  <FaDownload /> View Resume
                 </a>
               </div>
             </div>
