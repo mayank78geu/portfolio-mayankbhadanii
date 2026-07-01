@@ -145,7 +145,7 @@ const Home = () => {
 
     try {
       const options = {
-        key: 'rzp_test_T8DdJt43u7nw9O', // User's Test Key ID
+        key: 'rzp_live_T8DhVtz4SKDbpF', // User's Live Key ID
         amount: amount * 100, // paise
         currency: 'INR',
         name: 'Mayank Kumar',
@@ -580,7 +580,7 @@ const Home = () => {
                 </button>
 
                 <div className="secure-badge">
-                  <FaLock /> <span>Secured by Razorpay. Test mode enabled.</span>
+                  <FaLock /> <span>Secured by Razorpay.</span>
                 </div>
               </form>
             </div>
