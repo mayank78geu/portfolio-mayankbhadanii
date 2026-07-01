@@ -145,7 +145,7 @@ const Home = () => {
 
     try {
       const options = {
-        key: 'rzp_test_aB1c2D3e4F5g6H', // Formatted Test Key ID to pass SDK format checks
+        key: 'rzp_test_T8DdJt43u7nw9O', // User's Test Key ID
         amount: amount * 100, // paise
         currency: 'INR',
         name: 'Mayank Kumar',
