@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, FaGitAlt, FaAward, FaGraduationCap, FaCloud, FaRocket, FaDownload, FaCoffee, FaCheckCircle, FaLock } from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiMongodb, SiPostman } from 'react-icons/si';
 import DeveloperAvatar from '../components/DeveloperAvatar';
