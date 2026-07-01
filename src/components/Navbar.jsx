@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FaSun, FaMoon, FaDownload } from 'react-icons/fa';
+import myImg from '../assets/myimg.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -54,9 +55,9 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        {/* Monogram Logo "M" */}
+        {/* Nav Logo (Avatar Frame) */}
         <Link to="/" className="nav-logo">
-          <span className="logo-text">M</span>
+          <img src={myImg} alt="M" className="nav-logo-img" />
           <div className="logo-glow"></div>
         </Link>
 

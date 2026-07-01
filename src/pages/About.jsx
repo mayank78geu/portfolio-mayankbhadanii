@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaAward, FaCertificate, FaUsers, FaBook, FaWrench } from 'react-icons/fa';
+import myImg from '../assets/myimg.png';
 import './About.css';
 
 const About = () => {
@@ -61,10 +62,10 @@ const About = () => {
       desc: 'Regional-level winner among hundreds of teams across India for BestPath, a tech-for-social-good career guidance platform designed for rural students.'
     },
     {
-      title: "9th Rank — Cloud Ignite '26 Quiz",
+      title: "Top 10 — Cloud Ignite '26 Quiz",
       organizer: 'AWS Cloud Club, GEU',
       year: '2026',
-      desc: 'Achieved 9th rank in a competitive cloud computing quiz testing AWS fundamentals, architecture best practices, and cloud services knowledge.'
+      desc: 'Achieved Top 10 in a competitive cloud computing quiz testing AWS fundamentals, architecture best practices, and cloud services knowledge.'
     }
   ];
 
@@ -106,16 +107,26 @@ const About = () => {
         {/* Narrative Block */}
         <motion.section className="narrative-section" variants={itemVariants}>
           <div className="narrative-card glass-card">
-            <h3 className="card-headline">My Story</h3>
-            <p>
-              Hi, I'm Mayank Kumar. My coding journey started with a fascination for solving problems, leading me to complete my <strong>BCA</strong> at Arcade Business College in Patna. I am now pursuing my <strong>MCA</strong> at Graphic Era Deemed to be University in Dehradun, aiming to master high-performance, enterprise-grade development.
-            </p>
-            <p>
-              I specialize in <strong>end-to-end product development</strong>. Whether it is architecting relational schemas, developing robust backends using Java & Spring Boot, or engineering smooth interfaces in React, I love making parts move together seamlessly.
-            </p>
-            <p>
-              Lately, I have been focused on **AI API integrations** (such as Google Gemini) to build tools that solve real problems. As a Skill Development Team Member at Tech Business Incubator, I constantly seek opportunities to mentor, share knowledge, and build high-quality software.
-            </p>
+            <div className="narrative-grid">
+              <div className="narrative-image-col">
+                <div className="about-avatar-wrapper">
+                  <img src={myImg} alt="Mayank Kumar" className="about-avatar-img" />
+                  <div className="about-avatar-glow"></div>
+                </div>
+              </div>
+              <div className="narrative-text-col">
+                <h3 className="card-headline">My Story</h3>
+                <p>
+                  Hi, I'm Mayank Kumar. My coding journey started with a fascination for solving problems, leading me to complete my <strong>BCA</strong> at Arcade Business College in Patna. I am now pursuing my <strong>MCA</strong> at Graphic Era Deemed to be University in Dehradun, aiming to master high-performance, enterprise-grade development.
+                </p>
+                <p>
+                  I specialize in <strong>end-to-end product development</strong>. Whether it is architecting relational schemas, developing robust backends using Java & Spring Boot, or engineering smooth interfaces in React, I love making parts move together seamlessly.
+                </p>
+                <p>
+                  Lately, I have been focused on **AI API integrations** (such as Google Gemini) to build tools that solve real problems. As a Skill Development Team Member at Tech Business Incubator, I constantly seek opportunities to mentor, share knowledge, and build high-quality software.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.section>
 
