@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, FaGitAlt, FaAward, FaGraduationCap, FaCloud, FaRocket, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, FaGitAlt, FaAward, FaGraduationCap, FaCloud, FaRocket, FaDownload, FaCoffee, FaCheckCircle, FaLock } from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiMongodb, SiPostman } from 'react-icons/si';
 import DeveloperAvatar from '../components/DeveloperAvatar';
 import OrbitDivider from '../components/OrbitDivider';
@@ -95,6 +95,74 @@ const Counter = ({ value, duration = 2, suffix = "" }) => {
 };
 
 const Home = () => {
+  const [coffeeCount, setCoffeeCount] = useState(1);
+  const [customAmount, setCustomAmount] = useState('');
+  const [sponsorName, setSponsorName] = useState('');
+  const [sponsorMessage, setSponsorMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const getAmount = () => {
+    if (coffeeCount === 'custom') {
+      return Number(customAmount) || 0;
+    }
+    return coffeeCount * 50;
+  };
+
+  const loadRazorpayScript = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+  };
+
+  const handleSupport = async (e) => {
+    e.preventDefault();
+    const amount = getAmount();
+    if (amount <= 0) {
+      alert('Please enter a valid amount.');
+      return;
+    }
+
+    const scriptLoaded = await loadRazorpayScript();
+    if (!scriptLoaded) {
+      alert('Razorpay SDK failed to load. Please check your internet connection.');
+      return;
+    }
+
+    const options = {
+      key: 'rzp_test_placeholderKey', // Test key placeholder, works in sandbox
+      amount: amount * 100, // paise
+      currency: 'INR',
+      name: 'Mayank Kumar',
+      description: `Donation: Buy me ${coffeeCount === 'custom' ? 'coffee' : `${coffeeCount} coffee(s)`}`,
+      image: 'https://avatars.githubusercontent.com/u/104445899?v=4',
+      handler: function (response) {
+        setIsSuccess(true);
+        setSponsorName('');
+        setSponsorMessage('');
+        setCustomAmount('');
+        setCoffeeCount(1);
+      },
+      prefill: {
+        name: sponsorName || 'Sponsor',
+        email: 'mayank78stu@gmail.com',
+        contact: '+916200482891'
+      },
+      notes: {
+        message: sponsorMessage || 'No message provided'
+      },
+      theme: {
+        color: '#7C3AED'
+      }
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+
   const typewriterRoles = [
     "Full Stack Developer.",
     "MCA Candidate.",
@@ -377,6 +445,155 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
+      {/* 5.5. Buy Me a Coffee Section */}
+      <section className="coffee-section container">
+        <div className="section-header-centered">
+          <h2 className="section-title">Buy Me a Coffee</h2>
+          <p className="section-subtitle">If you like my work or want to support my open-source projects, feel free to buy me a coffee!</p>
+        </div>
+
+        <motion.div 
+          className="coffee-card glass-card"
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="coffee-grid">
+            {/* Visual Column */}
+            <div className="coffee-visual-col">
+              <div className="coffee-animation-container">
+                <div className="steam-wrapper">
+                  <span className="steam-line steam-1"></span>
+                  <span className="steam-line steam-2"></span>
+                  <span className="steam-line steam-3"></span>
+                </div>
+                <div className="cup-container">
+                  <FaCoffee className="coffee-cup-icon" />
+                  <div className="cup-handle"></div>
+                </div>
+              </div>
+              <div className="coffee-visual-text">
+                <h4>Support Mayank Kumar</h4>
+                <p>Every coffee fuels late-night coding, API debugging, and AWS deployments.</p>
+              </div>
+            </div>
+
+            {/* Form Column */}
+            <div className="coffee-form-col">
+              <form onSubmit={handleSupport} className="coffee-form">
+                <div className="coffee-quantity-selector">
+                  <p className="field-label">Select Quantity</p>
+                  <div className="coffee-qty-buttons">
+                    {[1, 3, 5].map((qty) => (
+                      <button
+                        key={qty}
+                        type="button"
+                        className={`qty-btn ${coffeeCount === qty ? 'active' : ''}`}
+                        onClick={() => {
+                          setCoffeeCount(qty);
+                          setCustomAmount('');
+                        }}
+                      >
+                        ☕ x {qty} <span className="price-label">(₹{qty * 50})</span>
+                      </button>
+                    ))}
+                    <button
+                      type="button"
+                      className={`qty-btn ${coffeeCount === 'custom' ? 'active' : ''}`}
+                      onClick={() => setCoffeeCount('custom')}
+                    >
+                      Custom ☕
+                    </button>
+                  </div>
+                </div>
+
+                {coffeeCount === 'custom' && (
+                  <motion.div 
+                    className="custom-amount-input-group"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                  >
+                    <label className="field-label" htmlFor="custom-amt">Amount (₹)</label>
+                    <input
+                      id="custom-amt"
+                      type="number"
+                      min="10"
+                      max="10000"
+                      placeholder="Enter amount (Min ₹10)"
+                      value={customAmount}
+                      onChange={(e) => setCustomAmount(e.target.value)}
+                      required={coffeeCount === 'custom'}
+                      className="coffee-input"
+                    />
+                  </motion.div>
+                )}
+
+                <div className="form-group">
+                  <label className="field-label" htmlFor="sponsor-name">Name (Optional)</label>
+                  <input
+                    id="sponsor-name"
+                    type="text"
+                    placeholder="Sponsor Name"
+                    value={sponsorName}
+                    onChange={(e) => setSponsorName(e.target.value)}
+                    className="coffee-input"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="field-label" htmlFor="sponsor-msg">Message (Optional)</label>
+                  <textarea
+                    id="sponsor-msg"
+                    rows="3"
+                    placeholder="Leave a message..."
+                    value={sponsorMessage}
+                    onChange={(e) => setSponsorMessage(e.target.value)}
+                    className="coffee-textarea"
+                  />
+                </div>
+
+                <button type="submit" className="btn btn-primary support-submit-btn">
+                  <FaCoffee /> Support Mayank with ₹{getAmount()}
+                </button>
+
+                <div className="secure-badge">
+                  <FaLock /> <span>Secured by Razorpay. Test mode enabled.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Success Modal */}
+      <AnimatePresence>
+        {isSuccess && (
+          <motion.div 
+            className="success-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div 
+              className="success-modal glass-card"
+              initial={{ scale: 0.8, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.8, y: 20 }}
+            >
+              <div className="success-icon-wrap">
+                <FaCheckCircle />
+              </div>
+              <h3>Thank You So Much!</h3>
+              <p>Your test support has been processed successfully. It keeps me motivated to build awesome full-stack projects!</p>
+              <button className="btn btn-primary" onClick={() => setIsSuccess(false)}>
+                Close
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* 6. Call to Action Footer Block */}
       <section className="cta-footer-section container">
