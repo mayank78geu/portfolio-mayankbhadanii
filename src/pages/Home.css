@@ -162,7 +162,7 @@
 
 /* 2. Highlights Section */
 .highlights-section {
-  margin: 3rem 0;
+  margin: 3rem auto;
 }
 
 .highlights-strip {
@@ -251,7 +251,7 @@
 
 /* 3. Tech Stack Strip */
 .tech-strip-section {
-  margin: 3rem 0;
+  margin: 3rem auto;
 }
 
 .tech-strip-container {
@@ -339,7 +339,7 @@
 
 /* 5. Featured Projects Grid */
 .featured-projects-section {
-  margin: 4rem 0;
+  margin: 4rem auto;
 }
 
 .featured-projects-grid {
@@ -439,7 +439,7 @@
 
 /* 6. CTA Footer Card */
 .cta-footer-section {
-  margin: 5rem 0;
+  margin: 5rem auto;
 }
 
 .cta-footer-card {
