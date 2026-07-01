@@ -145,7 +145,7 @@ const Home = () => {
 
     try {
       const options = {
-        key: 'rzp_live_T8DhVtz4SKDbpF', // User's Live Key ID
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_aB1c2D3e4F5g6H', // Expose key ID securely from env variables
         amount: amount * 100, // paise
         currency: 'INR',
         name: 'Mayank Kumar',
