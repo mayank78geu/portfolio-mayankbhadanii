@@ -5,19 +5,32 @@ import './Experience.css';
 
 const Experience = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
+      y: 0,
+      transition: {
+        duration: 0.45,
+        ease: [0.16, 1, 0.3, 1],
+        staggerChildren: 0.12
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.35,
+        ease: [0.16, 1, 0.3, 1]
+      }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 25, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: 'easeOut' }
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
@@ -50,6 +63,7 @@ const Experience = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <div className="ambient-glow exp-glow-1" style={{ top: '20%', left: '15%', width: '400px', height: '400px' }}></div>
       <div className="ambient-glow exp-glow-2" style={{ bottom: '20%', right: '15%', width: '500px', height: '500px' }}></div>
@@ -63,7 +77,11 @@ const Experience = () => {
 
         {/* Core Experience Card */}
         <motion.section className="experience-detail-section" variants={itemVariants}>
-          <div className="experience-large-card glass-card">
+            <motion.div 
+              className="experience-large-card glass-card"
+              whileHover={{ y: -6, scale: 1.005, boxShadow: '0 20px 45px rgba(124, 58, 237, 0.08)' }}
+              transition={{ duration: 0.3 }}
+            >
             <div className="experience-header-block">
               <div className="exp-icon-box">
                 <FaBriefcase />
@@ -103,7 +121,7 @@ const Experience = () => {
                 ))}
               </div>
             </div>
-          </div>
+            </motion.div>
         </motion.section>
       </div>
     </motion.div>

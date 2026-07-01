@@ -5,21 +5,32 @@ import './About.css';
 
 const About = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
+      y: 0,
       transition: {
-        staggerChildren: 0.15
+        duration: 0.45,
+        ease: [0.16, 1, 0.3, 1],
+        staggerChildren: 0.12
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.35,
+        ease: [0.16, 1, 0.3, 1]
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 25, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: 'easeOut' }
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
@@ -80,6 +91,7 @@ const About = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <div className="ambient-glow about-glow-1" style={{ top: '15%', left: '10%', width: '400px', height: '400px' }}></div>
       <div className="ambient-glow about-glow-2" style={{ top: '50%', right: '10%', width: '500px', height: '500px' }}></div>
@@ -158,7 +170,7 @@ const About = () => {
                     className="achievement-item-card glass-card" 
                     key={idx}
                     variants={itemVariants}
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
                   >
                     <div className="achievement-header">
                       <h4 className="achievement-title">{ach.title}</h4>
@@ -175,7 +187,11 @@ const About = () => {
               <motion.h3 className="subsection-title" variants={itemVariants}>
                 <FaUsers /> Position of Responsibility
               </motion.h3>
-              <motion.div className="responsibility-card glass-card" variants={itemVariants}>
+              <motion.div 
+                className="responsibility-card glass-card" 
+                variants={itemVariants}
+                whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
+              >
                 <div className="responsibility-header">
                   <h4 className="responsibility-role">{responsibility.role}</h4>
                   <span className="responsibility-year">{responsibility.year}</span>
@@ -202,7 +218,7 @@ const About = () => {
                     className="cert-card glass-card" 
                     key={idx}
                     variants={itemVariants}
-                    whileHover={{ scale: 1.03 }}
+                    whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
                   >
                     <h4 className="cert-name">{cert.name}</h4>
                     <p className="cert-issuer">{cert.issuer}</p>
@@ -219,7 +235,11 @@ const About = () => {
               <motion.h3 className="subsection-title" variants={itemVariants}>
                 <FaBook /> Personal Touch
               </motion.h3>
-              <motion.div className="hobbies-card glass-card" variants={itemVariants}>
+              <motion.div 
+                className="hobbies-card glass-card" 
+                variants={itemVariants}
+                whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
+              >
                 <div className="hobby-item">
                   <div className="hobby-icon"><FaBook /></div>
                   <div className="hobby-content">

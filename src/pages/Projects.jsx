@@ -156,10 +156,10 @@ const Projects = () => {
   return (
     <motion.div 
       className="projects-page page-wrapper"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="ambient-glow proj-glow-1" style={{ top: '15%', left: '5%', width: '450px', height: '450px' }}></div>
       <div className="ambient-glow proj-glow-2" style={{ bottom: '15%', right: '5%', width: '500px', height: '500px' }}></div>
@@ -199,11 +199,11 @@ const Projects = () => {
                 <motion.div 
                   className={`project-row-wrapper ${isEven ? 'row-normal' : 'row-reverse'}`}
                   key={proj.id}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 35 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   layout
                 >
                   {/* Mockup Column */}
@@ -213,7 +213,11 @@ const Projects = () => {
 
                   {/* Info Card Column */}
                   <div className="project-info-col">
-                    <div className="project-detail-card glass-card">
+                    <motion.div 
+                      className="project-detail-card glass-card"
+                      whileHover={{ y: -6, scale: 1.005, boxShadow: '0 20px 40px rgba(124, 58, 237, 0.08)' }}
+                      transition={{ duration: 0.3 }}
+                    >
                       <div className="project-title-row">
                         <span className="project-year-tag">{proj.year}</span>
                         {proj.badge && (
@@ -244,7 +248,7 @@ const Projects = () => {
                           <FaGithub /> GitHub Repo
                         </a>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               );

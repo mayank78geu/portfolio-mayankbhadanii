@@ -205,10 +205,10 @@ const Home = () => {
   return (
     <motion.div 
       className="home-page page-wrapper"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
     >
       {/* Background glow positioning */}
       <div className="ambient-glow home-glow-1" style={{ top: '10%', left: '5%', width: '500px', height: '500px' }}></div>
@@ -313,10 +313,11 @@ const Home = () => {
       <section className="highlights-section container">
         <motion.div 
           className="highlights-strip glass-card"
-          initial={{ y: 40, opacity: 0 }}
+          initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.01, y: -2, boxShadow: '0 20px 40px rgba(124, 58, 237, 0.1)' }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="highlight-item">
             <div className="highlight-icon">
@@ -374,10 +375,10 @@ const Home = () => {
       <section className="tech-strip-section container">
         <motion.div 
           className="tech-strip-container"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="tech-strip-statement">
             Building with a <span className="highlight-accent">full-stack & AI-integrated</span> impact focus
@@ -407,10 +408,11 @@ const Home = () => {
           {/* Project 1: BestPath */}
           <motion.div 
             className="featured-project-card glass-card"
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
+            whileHover={{ y: -8, scale: 1.015, boxShadow: '0 20px 40px rgba(139, 92, 246, 0.15)', borderColor: 'var(--accent)' }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="project-badge">
               <FaAward /> AICTE IDE Winner
@@ -434,10 +436,11 @@ const Home = () => {
           {/* Project 2: PrepRush */}
           <motion.div 
             className="featured-project-card glass-card"
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ y: -8, scale: 1.015, boxShadow: '0 20px 40px rgba(139, 92, 246, 0.15)', borderColor: 'var(--accent)' }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="project-badge badge-alt">
               <FaRocket /> Full Stack AI
@@ -478,8 +481,9 @@ const Home = () => {
           className="coffee-card glass-card"
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          whileHover={{ y: -4, boxShadow: '0 20px 45px rgba(139, 92, 246, 0.12)' }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="coffee-grid">
             {/* Visual Column */}

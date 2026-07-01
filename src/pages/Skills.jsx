@@ -48,10 +48,23 @@ const Skills = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
+      y: 0,
+      transition: {
+        duration: 0.45,
+        ease: [0.16, 1, 0.3, 1],
+        staggerChildren: 0.1
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.35,
+        ease: [0.16, 1, 0.3, 1]
+      }
     }
   };
 
@@ -60,7 +73,7 @@ const Skills = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.4, ease: 'easeOut' }
+      transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
@@ -70,6 +83,7 @@ const Skills = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <div className="ambient-glow skills-glow-1" style={{ top: '10%', left: '5%', width: '450px', height: '450px' }}></div>
       <div className="ambient-glow skills-glow-2" style={{ bottom: '15%', right: '5%', width: '500px', height: '500px' }}></div>
@@ -85,7 +99,10 @@ const Skills = () => {
         <motion.section className="academic-snapshot-section" variants={itemVariants}>
           <h3 className="section-inner-title"><FaGraduationCap /> Academic Snapshot</h3>
           <div className="academics-grid">
-            <div className="academic-card glass-card">
+            <motion.div 
+              className="academic-card glass-card"
+              whileHover={{ y: -5, scale: 1.015, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.12)' }}
+            >
               <span className="academic-tag">Active Degree</span>
               <h4 className="academic-title">Master of Computer Applications (MCA)</h4>
               <p className="academic-inst">Graphic Era Deemed to be University, Dehradun</p>
@@ -93,9 +110,12 @@ const Skills = () => {
                 <span className="academic-duration">2025 – 2027</span>
                 <span className="academic-grade">SGPA: 8.62/10</span>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="academic-card glass-card">
+            <motion.div 
+              className="academic-card glass-card"
+              whileHover={{ y: -5, scale: 1.015, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.12)' }}
+            >
               <span className="academic-tag tag-completed">Graduated</span>
               <h4 className="academic-title">Bachelor of Computer Applications (BCA)</h4>
               <p className="academic-inst">Arcade Business College, Patna (PPU)</p>
@@ -103,7 +123,7 @@ const Skills = () => {
                 <span className="academic-duration">2022 – 2025</span>
                 <span className="academic-grade">Honours: 79.75%</span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -116,7 +136,8 @@ const Skills = () => {
                 className="category-card glass-card" 
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.12)', borderColor: 'var(--accent)' }}
+                transition={{ type: 'spring', stiffness: 200, damping: 18 }}
               >
                 <div className="category-header">
                   <span className="category-icon">{cat.icon}</span>
