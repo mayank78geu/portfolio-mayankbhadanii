@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, FaGitAlt, FaAward, FaGraduationCap, FaCloud, FaRocket } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, FaGitAlt, FaAward, FaGraduationCap, FaCloud, FaRocket, FaDownload } from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiMongodb, SiPostman } from 'react-icons/si';
 import DeveloperAvatar from '../components/DeveloperAvatar';
 import OrbitDivider from '../components/OrbitDivider';
@@ -182,8 +182,12 @@ const Home = () => {
               <Link to="/projects" className="btn btn-primary">
                 <FaRocket /> View Projects
               </Link>
-              <a href="#/about" className="btn btn-secondary">
-                Learn More
+              <a 
+                href="/resume.pdf" 
+                download="Mayank_Kumar_Resume.pdf"
+                className="btn btn-secondary"
+              >
+                <FaDownload /> Download Resume
               </a>
             </motion.div>
 

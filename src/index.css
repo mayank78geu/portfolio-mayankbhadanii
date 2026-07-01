@@ -23,6 +23,22 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+html[data-theme='light'] {
+  --bg-base: #F5F3FA;
+  --bg-elevated: #EBE7F5;
+  --glow-primary: #8B5CF6;
+  --glow-soft: #A78BFA;
+  --accent: #7C3AED;
+  --accent-bright: #6D28D9;
+  --card-glass: rgba(124, 58, 237, 0.04);
+  --card-border: rgba(18, 10, 31, 0.08);
+  --text-primary: #120A1F;
+  --text-muted: #4E4366;
+  --text-faint: #82779C;
+  --button-primary-bg: #7C3AED;
+  --button-primary-text: #F5F3FA;
+}
+
 /* Global Reset & Base Styles */
 * {
   box-sizing: border-box;
@@ -40,6 +56,7 @@ html, body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Scrollbar Customization */
@@ -211,3 +228,13 @@ a:hover {
     transform: scale(1.05);
   }
 }
+
+/* Light Theme Hover Overrides */
+html[data-theme='light'] .btn-secondary:hover {
+  background-color: rgba(18, 10, 31, 0.04);
+}
+
+html[data-theme='light'] .glass-card:hover {
+  box-shadow: 0 10px 30px rgba(18, 10, 31, 0.08), inset 0 0 12px rgba(139, 92, 246, 0.02);
+}
+
