@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/github-handbook",
+      "destination": "https://github-handbook.netlify.app/",
+      "permanent": false
+    },
+    {
+      "source": "/github-handbook/:match*",
+      "destination": "https://github-handbook.netlify.app/:match*",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

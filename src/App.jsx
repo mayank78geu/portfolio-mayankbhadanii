@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -28,6 +28,19 @@ const ExternalRedirect = ({ to }) => {
   return null;
 };
 
+// Handler for legacy hash links (e.g., #/github-handbook)
+const LegacyHashRedirectHandler = () => {
+  React.useEffect(() => {
+    if (window.location.hash) {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('github-handbook')) {
+        window.location.replace('https://github-handbook.netlify.app/');
+      }
+    }
+  }, []);
+  return null;
+};
+
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -45,6 +58,10 @@ const AnimatedRoutes = () => {
           path="/github-handbook"
           element={<ExternalRedirect to="https://github-handbook.netlify.app/" />}
         />
+        <Route
+          path="/github-handbook/*"
+          element={<ExternalRedirect to="https://github-handbook.netlify.app/" />}
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -55,6 +72,7 @@ function App() {
     <Router>
       <div className="app-layout">
         <ScrollToTop />
+        <LegacyHashRedirectHandler />
         <Navbar />
         <main className="app-main">
           <AnimatedRoutes />
