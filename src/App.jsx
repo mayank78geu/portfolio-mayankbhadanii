@@ -20,9 +20,17 @@ const ScrollToTop = () => {
   return null;
 };
 
+// External redirect component
+const ExternalRedirect = ({ to }) => {
+  React.useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+  return null;
+};
+
 const AnimatedRoutes = () => {
   const location = useLocation();
-  
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -32,6 +40,11 @@ const AnimatedRoutes = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/resources" element={<Resources />} />
+        {/* Redirect /github-handbook to external site */}
+        <Route
+          path="/github-handbook"
+          element={<ExternalRedirect to="https://github-handbook.netlify.app/" />}
+        />
       </Routes>
     </AnimatePresence>
   );
