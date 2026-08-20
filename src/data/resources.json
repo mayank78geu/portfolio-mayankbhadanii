@@ -1,0 +1,15 @@
+[
+  {
+    "id": "github-az-handbook",
+    "title": "GitHub A-Z Handbook",
+    "subtitle": "Complete Git & GitHub mastery from fundamentals to production workflows",
+    "description": "A comprehensive, practical handbook covering GitHub from foundational basics to advanced DevOps concepts. Includes Git branching strategies, CLI commands, pull request workflows, merge conflict resolution, CI/CD automation, and repository management for Developers and DevOps engineers.",
+    "link": "https://github-handbook.netlify.app/",
+    "category": "Git & DevOps",
+    "badge": "Dev & DevOps",
+    "icon": "github",
+    "tags": ["Git", "GitHub", "DevOps", "CI/CD", "Branching", "Handbook"],
+    "featured": true,
+    "difficulty": "Beginner to Advanced"
+  }
+]

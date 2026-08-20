@@ -20,7 +20,8 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Academics & Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Experience', path: '/experience' }
+    { name: 'Experience', path: '/experience' },
+    { name: 'Resources', path: '/resources' }
   ];
 
   // Scrolled effect

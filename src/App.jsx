@@ -8,6 +8,7 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
+import Resources from './pages/Resources';
 import './App.css';
 
 // Scroll to top on page navigation
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </AnimatePresence>
   );
