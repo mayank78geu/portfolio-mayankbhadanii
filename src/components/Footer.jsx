@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-info">
             <h3 className="footer-title">Mayank Kumar</h3>
-            <p className="footer-subtitle">Full Stack Developer | MCA Candidate | AI Integration Enthusiast</p>
+            <p className="footer-subtitle">Full Stack Developer | Java, Spring Boot & React | MCA @ Graphic Era</p>
             <div className="footer-meta">
               <span className="meta-item">
                 <FaMapMarkerAlt className="meta-icon" /> Dehradun, India

@@ -37,23 +37,23 @@ const Experience = () => {
   const bullets = [
     {
       icon: <FaUsers />,
-      title: 'Graph-e-thon Hackathon & Summer Internship Planning',
-      text: 'Actively contribute to the planning and execution of large-scale skill development initiatives impacting 1000+ students across Graphic Era University.'
+      title: 'Graph-e-thon Hackathons & Skill Development Initiatives',
+      text: 'Lead and coordinate university-wide technical bootcamps and skill acceleration programs impacting 1,000+ engineering and computer applications students across Graphic Era University.'
     },
     {
       icon: <FaLaptopCode />,
-      title: 'Graph-e-thon 3.0 Evaluation & Mentorship',
-      text: 'Collaborated with industry experts and mentors on the official Evaluation & Mentorship Team. Evaluated student projects on technical depth, innovation, and feasibility while mentoring developers on REST API design, Spring Boot architecture, and frontend-backend integration best practices.'
+      title: 'Graph-e-thon 3.0 Technical Evaluation & Mentorship',
+      text: 'Served on the official Technical Evaluation & Mentorship Team. Evaluated complex project architectures on technical feasibility and clean code, while mentoring developers on Java Spring Boot backend design, RESTful API contracts, and React integration.'
     },
     {
       icon: <FaClipboardList />,
-      title: 'Cross-functional Collaboration',
-      text: 'Collaborated cross-functionally with university faculty, industry mentors, and student development teams to deliver high-quality programs aligned with current industry skill demands.'
+      title: 'Industry & Faculty Cross-Functional Alignment',
+      text: 'Collaborated with tech industry experts, startup mentors, and university faculty to curate modern hands-on learning modules matching enterprise software standards and cloud deployment workflows.'
     },
     {
       icon: <FaRegEnvelopeOpen />,
-      title: 'Intern Support & Program Operations',
-      text: 'Supported essential curriculum design, targeted outreach emails, official project documentation, and structured intern onboarding for the Summer Internship Program.'
+      title: 'Intern Onboarding & Curriculum Architecture',
+      text: 'Spearheaded technical curriculum authoring, outreach communication, and end-to-end intern onboarding documentation for structured incubation training cohorts.'
     }
   ];
 
@@ -71,8 +71,8 @@ const Experience = () => {
       <div className="container">
         {/* Section Header */}
         <motion.div className="section-header-centered" variants={itemVariants}>
-          <h2 className="section-title">Work Experience</h2>
-          <p className="section-subtitle">My professional contributions in student mentorship and technical incubator operations</p>
+          <h2 className="section-title">Work Experience & Leadership</h2>
+          <p className="section-subtitle">Professional contributions in student mentorship, software architecture evaluation, and incubator operations</p>
         </motion.div>
 
         {/* Core Experience Card */}
@@ -87,14 +87,14 @@ const Experience = () => {
                 <FaBriefcase />
               </div>
               <div className="exp-title-box">
-                <h3 className="role-title">Skill Development Team Member</h3>
+                <h3 className="role-title">Skill Development Team Member & Technical Mentor</h3>
                 <h4 className="company-title">Tech Business Incubator (TBI), Graphic Era University</h4>
                 <div className="exp-meta-row">
                   <span className="exp-meta-item">
                     <FaCalendarAlt /> Feb 2026 – Present
                   </span>
                   <span className="exp-meta-item">
-                    <FaMapMarkerAlt /> Dehradun, Uttarakhand
+                    <FaMapMarkerAlt /> Dehradun, Uttarakhand, India
                   </span>
                 </div>
               </div>

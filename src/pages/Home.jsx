@@ -185,10 +185,11 @@ const Home = () => {
   };
 
   const typewriterRoles = [
-    "Full Stack Developer.",
-    "MCA Candidate.",
-    "AI Integration Enthusiast.",
-    "AWS Certified Developer."
+    "Full Stack Developer (Java & React).",
+    "Spring Boot Backend Engineer.",
+    "AI & Gemini API Builder.",
+    "MCA Candidate @ Graphic Era.",
+    "AWS Cloud Practitioner Certified."
   ];
 
   const techIcons = [
@@ -259,7 +260,7 @@ const Home = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Full Stack Developer and MCA candidate with hands-on experience in designing and developing scalable web applications using Java, Spring Boot, React.js, and RESTful APIs. Proficient in SQL/NoSQL databases, AWS Cloud, and AI API integrations.
+              Full Stack Developer and MCA candidate specializing in building robust, scalable web applications with Java, Spring Boot, React.js, and RESTful APIs. Passionate about clean backend architecture, SQL/NoSQL databases, AWS Cloud deployments, and AI API integrations.
             </motion.p>
 
             <motion.div 
@@ -327,7 +328,7 @@ const Home = () => {
               <h3 className="highlight-val">
                 <Counter value={8.62} duration={1.5} />
               </h3>
-              <p className="highlight-label">Current MCA SGPA</p>
+              <p className="highlight-label">MCA SGPA (Graphic Era)</p>
             </div>
           </div>
 
@@ -339,7 +340,7 @@ const Home = () => {
             </div>
             <div className="highlight-content">
               <h3 className="highlight-val">AICTE</h3>
-              <p className="highlight-label">IDE Bootcamp Winner '25</p>
+              <p className="highlight-label">IDE Bootcamp Winner (Phase II)</p>
             </div>
           </div>
 
@@ -353,7 +354,7 @@ const Home = () => {
               <h3 className="highlight-val">
                 <Counter value={3} duration={1} suffix="+" />
               </h3>
-              <p className="highlight-label">Full-Stack Projects</p>
+              <p className="highlight-label">Production Web Systems</p>
             </div>
           </div>
 
@@ -365,7 +366,7 @@ const Home = () => {
             </div>
             <div className="highlight-content">
               <h3 className="highlight-val">AWS</h3>
-              <p className="highlight-label">Cloud Certified</p>
+              <p className="highlight-label">Cloud Practitioner Trained</p>
             </div>
           </div>
         </motion.div>
@@ -381,7 +382,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="tech-strip-statement">
-            Building with a <span className="highlight-accent">full-stack & AI-integrated</span> impact focus
+            Architecting robust web systems with a <span className="highlight-accent">Java, Spring Boot, React & AI integration</span> stack
           </p>
           <div className="tech-icons-row">
             {techIcons.map((tech) => (
@@ -401,7 +402,7 @@ const Home = () => {
       <section className="featured-projects-section container">
         <div className="section-header-centered">
           <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">A preview of my recent award-winning and full-stack creations</p>
+          <p className="section-subtitle">Full-stack web products, Spring Boot REST backends, and Gemini AI integrations</p>
         </div>
 
         <div className="featured-projects-grid">
@@ -420,15 +421,16 @@ const Home = () => {
             <div className="project-preview-info">
               <h3 className="project-title">BestPath</h3>
               <p className="project-desc">
-                Career guidance platform targeting rural students and parents. Generates personalized roadmaps, career awareness, and matches user interests using AI.
+                AI-driven career mentorship platform tailored for rural students. Integrates Google Gemini API to generate personalized learning paths backed by Spring Boot REST APIs.
               </p>
               <div className="project-tags">
                 <span className="tech-tag">React</span>
                 <span className="tech-tag">Spring Boot</span>
                 <span className="tech-tag">Gemini API</span>
+                <span className="tech-tag">REST API</span>
               </div>
               <Link to="/projects" className="project-card-link">
-                View Project Details &rarr;
+                Explore Full Case Study &rarr;
               </Link>
             </div>
           </motion.div>
@@ -448,7 +450,7 @@ const Home = () => {
             <div className="project-preview-info">
               <h3 className="project-title">PrepRush</h3>
               <p className="project-desc">
-                AI-powered rapid revision helper ("Last-Night Study Buddy") that takes a topic and instantly creates structured review roadmaps and quizzes via Gemini API.
+                Intelligent rapid revision companion ("Last-Night Study Buddy") that dynamically extracts syllabus concepts, builds revision roadmaps, and conducts interactive quizzes via Gemini API.
               </p>
               <div className="project-tags">
                 <span className="tech-tag">React</span>
@@ -457,7 +459,7 @@ const Home = () => {
                 <span className="tech-tag">Gemini API</span>
               </div>
               <Link to="/projects" className="project-card-link">
-                View Project Details &rarr;
+                Explore Full Case Study &rarr;
               </Link>
             </div>
           </motion.div>
@@ -629,9 +631,9 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="cta-title">Let's build something impactful together</h2>
+          <h2 className="cta-title">Let's engineer high-impact solutions together</h2>
           <p className="cta-subtitle">
-            I am currently exploring full-stack and backend engineering roles. Reach out to collaborate!
+            Actively exploring Full Stack Developer, Backend Software Engineer, and Java/React development roles. Let's discuss your next project or engineering opportunity!
           </p>
           <a href="mailto:mayank78stu@gmail.com" className="btn btn-primary">
             <FaEnvelope /> Get In Touch

@@ -8,42 +8,42 @@ const Skills = () => {
     {
       title: 'Programming Languages',
       icon: <FaCode />,
-      skills: ['Java', 'Python', 'C', 'JavaScript', 'PHP', 'SQL', 'HTML5', 'CSS3']
+      skills: ['Java', 'JavaScript (ES6+)', 'Python', 'SQL', 'C', 'HTML5', 'CSS3', 'PHP']
     },
     {
-      title: 'Frameworks & Libraries',
+      title: 'Frameworks & Backend Architecture',
       icon: <FaServer />,
-      skills: ['Spring Boot', 'React.js', 'Next.js', 'Spring MVC', 'Spring Data JPA', 'REST API']
+      skills: ['Spring Boot', 'Spring Data JPA', 'Spring MVC', 'RESTful Microservices', 'React.js', 'Next.js', 'Hibernate', 'Maven']
     },
     {
-      title: 'Databases',
+      title: 'Databases & Data Modeling',
       icon: <FaDatabase />,
-      skills: ['MySQL', 'PostgreSQL', 'MongoDB (NoSQL)', 'JDBC']
+      skills: ['MySQL (Relational)', 'MongoDB (NoSQL)', 'PostgreSQL', 'JDBC', 'Database Normalization', 'Schema Design']
     },
     {
-      title: 'Cloud & DevOps',
+      title: 'Cloud & DevOps Tooling',
       icon: <FaCloud />,
-      skills: ['AWS (EC2, S3, IAM)', 'Git', 'GitHub', 'Linux (Basic)']
+      skills: ['AWS (EC2, S3, IAM)', 'Git Version Control', 'GitHub Workflows', 'Linux Environments', 'CI/CD Automation']
     },
     {
       title: 'AI & API Integration',
       icon: <FaBrain />,
-      skills: ['Google Gemini API', 'RESTful API Design', 'JSON', 'Postman']
+      skills: ['Google Gemini API', 'RESTful API Architecture', 'Stateless API Design', 'JSON & Webhooks', 'Prompt Engineering']
     },
     {
-      title: 'Developer Tools',
+      title: 'Developer Tools & IDEs',
       icon: <FaWrench />,
-      skills: ['IntelliJ IDEA', 'VS Code', 'Postman', 'Maven']
+      skills: ['IntelliJ IDEA', 'VS Code', 'Postman API Client', 'Git CLI', 'Maven Build Tool']
     },
     {
-      title: 'Core CS Concepts',
+      title: 'Core Computer Science',
       icon: <FaBookOpen />,
-      skills: ['Data Structures & Algorithms', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks', 'Agile/Scrum']
+      skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'DBMS & ACID Principles', 'Operating Systems', 'Computer Networks']
     },
     {
-      title: 'Other Skills',
+      title: 'Mentorship & Professional',
       icon: <FaFolderOpen />,
-      skills: ['Microsoft Office Suite', 'Project Documentation']
+      skills: ['Technical Mentorship', 'Hackathon Evaluation', 'Agile / Scrum Methodologies', 'System Documentation']
     }
   ];
 

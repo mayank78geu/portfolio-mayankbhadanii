@@ -115,15 +115,15 @@ const About = () => {
                 </div>
               </div>
               <div className="narrative-text-col">
-                <h3 className="card-headline">My Story</h3>
+                <h3 className="card-headline">My Engineering Journey</h3>
                 <p>
-                  Hi, I'm Mayank Kumar. My coding journey started with a fascination for solving problems, leading me to complete my <strong>BCA</strong> at Arcade Business College in Patna. I am now pursuing my <strong>MCA</strong> at Graphic Era Deemed to be University in Dehradun, aiming to master high-performance, enterprise-grade development.
+                  Hello! I'm <strong>Mayank Kumar</strong> (also known as <strong>Mayank Bhadani</strong>), a Full Stack Developer driven by building reliable, scalable, and user-centric software. My computing journey began with a rigorous foundation during my <strong>BCA</strong> at Arcade Business College (Patliputra University, 79.75% Honours), and continues as I pursue my <strong>MCA</strong> at Graphic Era Deemed to be University in Dehradun, maintaining a strong <strong>8.62/10 SGPA</strong>.
                 </p>
                 <p>
-                  I specialize in <strong>end-to-end product development</strong>. Whether it is architecting relational schemas, developing robust backends using Java & Spring Boot, or engineering smooth interfaces in React, I love making parts move together seamlessly.
+                  I specialize in <strong>end-to-end full-stack engineering</strong>. On the backend, I design clean, maintainable microservices and RESTful APIs using <strong>Java, Spring Boot, and Spring Data JPA</strong> with optimized relational schemas in <strong>MySQL</strong> and flexible document stores in <strong>MongoDB</strong>. On the frontend, I create modern, intuitive interfaces using <strong>React.js</strong>, Tailwind CSS, and Framer Motion.
                 </p>
                 <p>
-                  Lately, I have been focused on **AI API integrations** (such as Google Gemini) to build tools that solve real problems. As a Skill Development Team Member at Tech Business Incubator, I constantly seek opportunities to mentor, share knowledge, and build high-quality software.
+                  Beyond traditional web systems, I actively integrate <strong>Generative AI APIs (such as Google Gemini)</strong> to create intelligent tools like personalized career navigators and automated study assistants. As an active team member at Graphic Era's <strong>Tech Business Incubator (TBI)</strong>, I lead skill development initiatives, mentor junior developers, and contribute to hackathons impacting 1,000+ students.
                 </p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaAward, FaExternalLinkAlt, FaFilter, FaLaptop } from 'react-icons/fa';
+import { FaGithub, FaFilter } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -10,16 +10,17 @@ const Projects = () => {
     {
       id: 1,
       title: 'BestPath',
-      subtitle: 'Career Guidance Platform for Rural Students',
+      subtitle: 'AI-Driven Career Guidance Platform for Rural Students',
       year: '2025',
       badge: '🏆 AICTE IDE Bootcamp Winner (Phase II)',
-      role: 'Full Stack Developer',
-      tags: ['React.js', 'Spring Boot', 'REST API', 'Gemini API'],
-      github: 'https://github.com/mayank78geu/portfolio-mayankbhadanii', // Use the repo link as placeholder
+      role: 'Full Stack Architect & Lead Developer',
+      tags: ['React.js', 'Spring Boot', 'REST API', 'Gemini API', 'MySQL'],
+      github: 'https://github.com/mayank78geu/portfolio-mayankbhadanii',
       description: [
-        'A career guidance platform targeting rural students and parents with limited exposure to modern career paths; provides personalised career roadmaps, domain awareness, and interest-based suggestions.',
-        'Integrated Google Gemini API to generate dynamic, personalised career roadmaps based on user interests, academic background, and skill level.',
-        'Designed full-stack architecture covering React.js frontend, Spring Boot REST backend, and database integration — handling end-to-end user flow from onboarding to roadmap delivery.'
+        'Recognized as Regional Winner at AICTE IDE Bootcamp 2025 (Phase II) among hundreds of competing student innovations across India.',
+        'Architected an end-to-end career guidance platform designed specifically for students with limited access to modern career counseling.',
+        'Integrated Google Gemini API to dynamically generate structured multi-stage career roadmaps based on user interests, academic background, and aptitude.',
+        'Engineered a scalable Spring Boot REST API backend with relational schema constraints and validation, ensuring smooth data flow to a modular React.js frontend.'
       ],
       // Mockup representation data
       mockupType: 'career',
@@ -28,17 +29,17 @@ const Projects = () => {
     {
       id: 2,
       title: 'PrepRush',
-      subtitle: 'Last-Night Study Buddy & AI Revision Helper',
+      subtitle: 'AI-Powered Exam Revision & Rapid Learning Assistant',
       year: '2025',
-      badge: 'AI Revision Partner',
+      badge: '⚡ AI Revision Companion',
       role: 'Full Stack Developer',
-      tags: ['React.js', 'Spring Boot', 'MongoDB', 'Gemini API'],
+      tags: ['React.js', 'Spring Boot', 'MongoDB', 'Gemini API', 'NoSQL'],
       github: 'https://github.com/mayank78geu/portfolio-mayankbhadanii',
       description: [
-        'An AI-powered rapid revision tool — enables students to input a topic and instantly receive a structured learning roadmap tailored to their academic level via Google Gemini API.',
-        'Built RESTful APIs in Spring Boot to handle topic submissions, Gemini API orchestration, quiz generation, and user session data persistence in MongoDB.',
-        'Developed responsive React.js frontend supporting profile creation, roadmap rendering, explanation modules, and interactive quizzes for targeted last-minute exam preparation.',
-        'Implemented NoSQL data modeling in MongoDB for flexible storage of user profiles, study history, and AI-generated content.'
+        'Built an AI-driven rapid study tool ("Last-Night Study Buddy") that takes any syllabus topic and generates instant revision summaries, concept maps, and dynamic practice quizzes.',
+        'Orchestrated multi-turn Google Gemini API prompt flows from a high-throughput Spring Boot REST backend.',
+        'Implemented NoSQL data persistence in MongoDB for dynamic user study sessions, quiz score tracking, and custom roadmap histories.',
+        'Crafted a high-performance React.js single-page application with interactive quiz modules and real-time score feedback.'
       ],
       mockupType: 'study',
       mockupColors: { primary: '#8B5CF6', secondary: '#F5F3FA' }
@@ -46,17 +47,17 @@ const Projects = () => {
     {
       id: 3,
       title: 'MedNext',
-      subtitle: 'Patient-Centric Appointment Management System',
+      subtitle: 'Patient-Centric Healthcare & Clinical Appointment System',
       year: '2024',
-      badge: 'Healthcare Platform',
-      role: 'Team Leader & Backend Developer',
-      tags: ['React.js', 'Spring Boot', 'MySQL', 'REST API'],
+      badge: '🏥 Clinical Healthcare System',
+      role: 'Team Lead & Backend Developer',
+      tags: ['React.js', 'Spring Boot', 'MySQL', 'REST API', 'Database Design'],
       github: 'https://github.com/mayank78geu/portfolio-mayankbhadanii',
       description: [
-        'A full-stack healthcare platform enabling patients to book, manage, and track medical appointments online.',
-        'Designed and developed RESTful APIs using Spring Boot to handle CRUD operations for patient records, appointment scheduling, doctor availability, and status updates.',
-        'Implemented MySQL relational database schema to efficiently store and retrieve patient and appointment data with referential integrity.',
-        'Ensured clean API contract design enabling seamless integration with the React.js frontend through well-documented, stateless REST endpoints.'
+        'Engineered a full-stack clinical appointment booking and healthcare records management system.',
+        'Designed and implemented normalized MySQL relational schemas with strict foreign key constraints to ensure ACID compliance and patient data integrity.',
+        'Developed stateless RESTful API endpoints in Spring Boot handling appointment scheduling, doctor availability calendars, and patient history queries.',
+        'Led the backend team and established clean API contract documentation enabling seamless integration with the React.js client interface.'
       ],
       mockupType: 'health',
       mockupColors: { primary: '#10B981', secondary: '#34D399' }
