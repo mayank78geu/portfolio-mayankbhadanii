@@ -41,9 +41,9 @@ const Skills = () => {
       skills: ['Data Structures & Algorithms', 'Object-Oriented Programming (OOP)', 'DBMS & ACID Principles', 'Operating Systems', 'Computer Networks']
     },
     {
-      title: 'Mentorship & Professional',
+      title: 'Collaboration & Evaluation',
       icon: <FaFolderOpen />,
-      skills: ['Technical Mentorship', 'Hackathon Evaluation', 'Agile / Scrum Methodologies', 'System Documentation']
+      skills: ['Project & Code Evaluation', 'Hackathon Operations', 'Agile / Scrum Methodologies', 'Technical Documentation']
     }
   ];
 

@@ -77,12 +77,12 @@ const About = () => {
   ];
 
   const responsibility = {
-    role: 'Evaluation & Mentorship Team — Graph-e-thon 3.0',
+    role: 'Evaluation & Mentorship Team Member — Graph-e-thon 3.0',
     org: 'Tech Business Incubator, Graphic Era University',
     year: '2026',
     points: [
-      'Evaluated student projects on technical depth, innovation, and feasibility; provided structured feedback to participating teams.',
-      'Mentored student developers on REST API design, Spring Boot architecture, and frontend-backend integration best practices.'
+      'Served as a core member of the Mentorship & Evaluation Team for Graph-e-thon 3.0 hackathon.',
+      'Evaluated student projects on technical depth, innovation, and architecture feasibility; provided structured feedback to participating teams.'
     ]
   };
 
@@ -123,7 +123,7 @@ const About = () => {
                   I specialize in <strong>end-to-end full-stack engineering</strong>. On the backend, I design clean, maintainable microservices and RESTful APIs using <strong>Java, Spring Boot, and Spring Data JPA</strong> with optimized relational schemas in <strong>MySQL</strong> and flexible document stores in <strong>MongoDB</strong>. On the frontend, I create modern, intuitive interfaces using <strong>React.js</strong>, Tailwind CSS, and Framer Motion.
                 </p>
                 <p>
-                  Beyond traditional web systems, I actively integrate <strong>Generative AI APIs (such as Google Gemini)</strong> to create intelligent tools like personalized career navigators and automated study assistants. As an active team member at Graphic Era's <strong>Tech Business Incubator (TBI)</strong>, I lead skill development initiatives, mentor junior developers, and contribute to hackathons impacting 1,000+ students.
+                  Beyond traditional web systems, I actively integrate <strong>Generative AI APIs (such as Google Gemini)</strong> to create intelligent tools like personalized career navigators and automated study assistants. As an active team member at Graphic Era's <strong>Tech Business Incubator (TBI)</strong>, I contribute to skill development initiatives, project evaluations, and hackathons impacting 1,000+ students.
                 </p>
               </div>
             </div>
