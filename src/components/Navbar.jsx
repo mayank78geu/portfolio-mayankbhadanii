@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FaSun, FaMoon, FaDownload } from 'react-icons/fa';
-import myImg from '../assets/myimg.png';
+import myImg from '../assets/mb.jpg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark';
   });
-  
+
   const location = useLocation();
 
   const navLinks = [
@@ -91,9 +91,9 @@ const Navbar = () => {
           {/* Action Buttons (Theme Toggle & Resume Download) */}
           <div className="nav-controls">
             {/* Theme Toggle */}
-            <button 
-              className="theme-toggle-btn" 
-              onClick={toggleTheme} 
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
               aria-label="Toggle Theme"
               title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
             >
@@ -101,8 +101,8 @@ const Navbar = () => {
             </button>
 
             {/* Resume Download (Desktop only in navbar) */}
-            <a 
-              href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing" 
+            <a
+              href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="navbar-resume-btn btn btn-secondary"
@@ -113,8 +113,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Nav Button */}
-          <button 
-            className="nav-mobile-toggle" 
+          <button
+            className="nav-mobile-toggle"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -146,11 +146,11 @@ const Navbar = () => {
                   </Link>
                 );
               })}
-              
+
               {/* Mobile controls inside drawer */}
               <div className="mobile-drawer-controls">
-                <a 
-                  href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing" 
+                <a
+                  href="https://drive.google.com/file/d/1fLXSrr0QwiilpkEgeA7KbiLsBkLjGAg7/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mobile-resume-btn btn btn-primary"

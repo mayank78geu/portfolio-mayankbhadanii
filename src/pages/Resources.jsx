@@ -7,6 +7,7 @@ import {
   FaSearch, 
   FaFilter, 
   FaGithub, 
+  FaDocker,
   FaCode, 
   FaTerminal, 
   FaCopy, 
@@ -69,6 +70,9 @@ const Resources = () => {
 
   // Helper to pick icon based on resource category or icon field
   const getResourceIcon = (iconName, category) => {
+    if (iconName === 'docker' || category?.toLowerCase().includes('docker')) {
+      return <FaDocker />;
+    }
     if (iconName === 'github' || category?.toLowerCase().includes('git')) {
       return <FaGithub />;
     }

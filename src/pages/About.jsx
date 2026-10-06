@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaAward, FaCertificate, FaUsers, FaBook, FaWrench } from 'react-icons/fa';
-import myImg from '../assets/myimg.png';
+import myImg from '../assets/mb.jpg';
 import SEO from '../components/SEO';
 import './About.css';
 
@@ -88,7 +88,7 @@ const About = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="about-page page-wrapper"
       variants={containerVariants}
       initial="hidden"
@@ -143,12 +143,12 @@ const About = () => {
           <motion.h3 className="subsection-title" variants={itemVariants}>
             <FaGraduationCap /> Education
           </motion.h3>
-          
+
           <div className="timeline-container">
             <div className="timeline-line"></div>
             {education.map((edu, idx) => (
-              <motion.div 
-                className="timeline-item" 
+              <motion.div
+                className="timeline-item"
                 key={idx}
                 variants={itemVariants}
               >
@@ -185,8 +185,8 @@ const About = () => {
               </motion.h3>
               <div className="achievements-list">
                 {achievements.map((ach, idx) => (
-                  <motion.div 
-                    className="achievement-item-card glass-card" 
+                  <motion.div
+                    className="achievement-item-card glass-card"
                     key={idx}
                     variants={itemVariants}
                     whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
@@ -206,8 +206,8 @@ const About = () => {
               <motion.h3 className="subsection-title" variants={itemVariants}>
                 <FaUsers /> Position of Responsibility
               </motion.h3>
-              <motion.div 
-                className="responsibility-card glass-card" 
+              <motion.div
+                className="responsibility-card glass-card"
                 variants={itemVariants}
                 whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
               >
@@ -233,8 +233,8 @@ const About = () => {
               </motion.h3>
               <div className="certs-grid">
                 {certifications.map((cert, idx) => (
-                  <motion.div 
-                    className="cert-card glass-card" 
+                  <motion.div
+                    className="cert-card glass-card"
                     key={idx}
                     variants={itemVariants}
                     whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
@@ -254,8 +254,8 @@ const About = () => {
               <motion.h3 className="subsection-title" variants={itemVariants}>
                 <FaBook /> Personal Touch
               </motion.h3>
-              <motion.div 
-                className="hobbies-card glass-card" 
+              <motion.div
+                className="hobbies-card glass-card"
                 variants={itemVariants}
                 whileHover={{ y: -4, scale: 1.01, boxShadow: '0 15px 30px rgba(124, 58, 237, 0.1)' }}
               >

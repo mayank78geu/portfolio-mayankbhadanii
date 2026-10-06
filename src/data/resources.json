@@ -1,5 +1,18 @@
 [
   {
+    "id": "docker-az-handbook",
+    "title": "Docker A-Z Handbook",
+    "subtitle": "Complete Docker mastery from fundamentals to production CI/CD pipelines",
+    "description": "An A–Z field guide for developers who containerize their apps and DevOps engineers who run them in production. 19 chapters covering Docker architecture, Dockerfile syntax, multi-stage builds, persistent volumes, bridge networking, Docker Compose, security hardening, and GitHub Actions CI/CD automation.",
+    "link": "/blog/docker-handbook",
+    "category": "DevOps & Containers",
+    "badge": "Dev & DevOps",
+    "icon": "docker",
+    "tags": ["Docker", "Containers", "DevOps", "CI/CD", "Docker Compose", "Multi-Stage Builds", "Handbook"],
+    "featured": true,
+    "difficulty": "Beginner to Advanced"
+  },
+  {
     "id": "github-az-handbook",
     "title": "GitHub A-Z Handbook",
     "subtitle": "Complete Git & GitHub mastery from fundamentals to production workflows",

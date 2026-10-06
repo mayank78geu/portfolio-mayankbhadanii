@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import myImg from '../assets/myimg.png';
+import myImg from '../assets/mb.jpg';
 import './DeveloperAvatar.css';
 
 const DeveloperAvatar = () => {
@@ -8,7 +8,7 @@ const DeveloperAvatar = () => {
     <div className="avatar-wrapper">
       {/* Background radial glow */}
       <div className="avatar-glow"></div>
-      
+
       {/* Hand-drawn style callout */}
       <div className="avatar-callout">
         <span className="callout-text">Hello! I am</span>
@@ -19,7 +19,7 @@ const DeveloperAvatar = () => {
       </div>
 
       {/* Main Image Avatar */}
-      <motion.div 
+      <motion.div
         className="avatar-image-container"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

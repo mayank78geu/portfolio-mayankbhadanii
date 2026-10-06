@@ -5,26 +5,33 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { getBlogBySlug } from '../data/blogsData';
 import SEO from '../components/SEO';
 import GitGitHubHandbook from '../components/blog/GitGitHubHandbook';
+import DockerHandbook from '../components/blog/DockerHandbook';
 import './BlogPost.css';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const blog = getBlogBySlug(slug || 'git-github-handbook');
+  const currentSlug = slug || 'docker-handbook';
+  const blog = getBlogBySlug(currentSlug);
 
-  // Schema.org BlogPosting Structured Data for Google Rich Snippets
+  // Schema.org TechArticle & BlogPosting Structured Data for Google Rich Snippets & Search Rankings
   const blogSchema = blog ? {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': 'TechArticle',
     'headline': blog.title,
     'alternativeHeadline': blog.subtitle,
-    'description': blog.excerpt,
+    'description': blog.metaDescription || blog.excerpt,
     'image': 'https://mayankbhadanii.dev/android-chrome-512x512.png',
     'datePublished': blog.publishedDate,
     'dateModified': blog.lastUpdated || blog.publishedDate,
+    'inLanguage': 'en-US',
     'author': {
       '@type': 'Person',
       'name': 'Mayank Kumar',
-      'url': 'https://mayankbhadanii.dev/'
+      'url': 'https://mayankbhadanii.dev/',
+      'sameAs': [
+        'https://github.com/mayank78geu',
+        'https://linkedin.com/in/mayank78stu'
+      ]
     },
     'publisher': {
       '@type': 'Person',
@@ -39,7 +46,9 @@ const BlogPost = () => {
       '@id': `https://mayankbhadanii.dev/blog/${blog.slug}`
     },
     'keywords': blog.keywords,
-    'articleSection': blog.category
+    'articleSection': blog.category,
+    'proficiencyLevel': 'Beginner to Advanced',
+    'dependencies': blog.slug === 'docker-handbook' ? 'Docker Engine, Docker Compose' : 'Git, GitHub, GitHub Actions'
   } : null;
 
   const containerVariants = {
@@ -103,10 +112,15 @@ const BlogPost = () => {
       ></div>
 
       <div className="blog-post-full-container">
-        {slug === 'git-github-handbook' || !slug ? (
+        {blog.slug === 'docker-handbook' ? (
+          <DockerHandbook />
+        ) : blog.slug === 'git-github-handbook' ? (
           <GitGitHubHandbook />
         ) : (
-          <div>Article Content</div>
+          <div className="container text-center py-5">
+            <h2>{blog.title}</h2>
+            <p>{blog.excerpt}</p>
+          </div>
         )}
       </div>
     </motion.div>
