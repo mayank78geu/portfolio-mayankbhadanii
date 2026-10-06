@@ -18,8 +18,8 @@ export const blogsData = [
       role: 'Full Stack Developer & DevOps Enthusiast',
       avatar: '/myimg.png'
     },
-    metaDescription: 'Comprehensive Git and GitHub Handbook for Developers and DevOps Engineers. 19 chapters with 60+ commands, branching diagrams, cheat sheets, and GitHub Actions CI/CD setup.',
-    keywords: 'Git tutorial, GitHub Handbook, DevOps Git Guide, Git Cheat Sheet, GitHub Actions CI/CD, Git branching, Git merge vs rebase, Mayank Kumar Git Guide, Dehradun software developer'
+    metaDescription: 'Comprehensive Git and GitHub Handbook for Developers and DevOps Engineers authored by Mayank Kumar. 19 chapters with 60+ commands, branching diagrams, cheat sheets, and GitHub Actions CI/CD.',
+    keywords: 'Mayank Kumar, Mayank Kumar Git, Mayank Kumar GitHub Handbook, Mayank Kumar DevOps, Git tutorial Mayank Kumar, Git Cheat Sheet Mayank Kumar, Mayank Bhadani'
   }
 ];
 

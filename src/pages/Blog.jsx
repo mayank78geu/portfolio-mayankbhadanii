@@ -111,11 +111,11 @@ const Blog = () => {
       animate="visible"
       exit="exit"
     >
-      {/* Primary SEO Tagging */}
+      {/* Primary SEO Tagging for Mayank Kumar Blog */}
       <SEO
-        title="Engineering Blog & Technical Handbooks"
-        description="Explore in-depth technical guides, Git & GitHub handbooks, full-stack architecture patterns, and DevOps tutorials by Mayank Kumar."
-        keywords="Mayank Kumar Blog, Git Handbook, GitHub Handbook, Full Stack Engineering, DevOps Tutorials, Java Spring Boot Articles, React.js guides"
+        title="Engineering Blog & Technical Handbooks | Mayank Kumar"
+        description="Technical engineering blog, architecture guides, and developer handbooks by Mayank Kumar (Mayank Bhadani) — Full Stack Developer & DevOps enthusiast."
+        keywords="Mayank Kumar Blog, Mayank Kumar Engineering, Mayank Kumar Git Handbook, Mayank Kumar GitHub, Mayank Kumar Tutorials, Mayank Bhadani Blog, Java Spring Boot Mayank Kumar"
         canonicalUrl="https://mayankbhadanii.dev/blog"
         schemaData={blogListSchema}
       />

@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 import resourcesData from '../data/resources.json';
+import SEO from '../components/SEO';
 import './Resources.css';
 
 const Resources = () => {
@@ -118,6 +119,13 @@ const Resources = () => {
       animate="visible"
       exit="exit"
     >
+      <SEO
+        title="Mayank Kumar | Developer Resources & Handbooks | Software Engineer"
+        description="Curated technical handbooks, developer cheat sheets, and practical engineering guides for Developers and DevOps engineers created by Mayank Kumar (Graphic Era, TBI). Connect on LinkedIn."
+        keywords="Mayank Kumar website, Mayank Kumar Software engineer, Mayank Kumar developer linkedin, Mayank Kumar linkedin, Mayank Kumar Graphic era, Mayank Kumar Git Handbook, Mayank Kumar Resources, Mayank Bhadani"
+        canonicalUrl="https://mayankbhadanii.dev/resources"
+      />
+
       {/* Ambient background glows */}
       <div
         className="ambient-glow resources-glow-1"

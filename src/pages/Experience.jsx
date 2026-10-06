@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaLaptopCode, FaRegEnvelopeOpen, FaClipboardList } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './Experience.css';
 
 const Experience = () => {
@@ -65,6 +66,13 @@ const Experience = () => {
       animate="visible"
       exit="exit"
     >
+      <SEO
+        title="Mayank Kumar | TBI Experience & Leadership @ Graphic Era"
+        description="Review Mayank Kumar's experience at Technology Business Incubator (TBI) Graphic Era, Graph-e-thon Hackathons, project evaluations, and software developer leadership. Connect on LinkedIn."
+        keywords="Mayank Kumar TBI, Mayank Kumar TBI Graphic Era, Mayank Kumar Technology Business Incubator, Mayank Kumar Graphic era, Mayank Kumar Software engineer, Mayank Kumar linkedin, Mayank Kumar developer linkedin, Mayank Kumar Experience"
+        canonicalUrl="https://mayankbhadanii.dev/experience"
+      />
+
       <div className="ambient-glow exp-glow-1" style={{ top: '20%', left: '15%', width: '400px', height: '400px' }}></div>
       <div className="ambient-glow exp-glow-2" style={{ bottom: '20%', right: '15%', width: '500px', height: '500px' }}></div>
 

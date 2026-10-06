@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaJava, FaReact, FaAws, F
 import { SiSpringboot, SiMysql, SiMongodb, SiPostman } from 'react-icons/si';
 import DeveloperAvatar from '../components/DeveloperAvatar';
 import OrbitDivider from '../components/OrbitDivider';
+import SEO from '../components/SEO';
 import './Home.css';
 
 // Typewriter Component
@@ -211,6 +212,13 @@ const Home = () => {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
     >
+      <SEO
+        title="Mayank Kumar | Full Stack Developer & Software Engineer | Graphic Era, TBI"
+        description="Official website and portfolio of Mayank Kumar (Mayank Bhadani) — Full Stack Developer & Software Engineer at Graphic Era University, associated with TBI. Specializing in Java, Spring Boot, React.js, Full Stack Development, and Cloud/AI integrations. Connect on LinkedIn."
+        keywords="Mayank Kumar, Mayank Kumar TBI, Mayank Kumar Graphic era, Mayank Kumar Full stack Development, Mayank Kumar website, Mayank Kumar Software engineer, Mayank Kumar linkedin, Mayank Kumar developer linkedin, Mayank Kumar Graphic Era University, Mayank Kumar TBI Graphic Era, Mayank Kumar Java, Mayank Kumar Spring Boot, Mayank Bhadani"
+        canonicalUrl="https://mayankbhadanii.dev/"
+      />
+
       {/* Background glow positioning */}
       <div className="ambient-glow home-glow-1" style={{ top: '10%', left: '5%', width: '500px', height: '500px' }}></div>
       <div className="ambient-glow home-glow-2" style={{ top: '60%', right: '5%', width: '600px', height: '600px' }}></div>

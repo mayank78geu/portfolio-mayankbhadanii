@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaFilter } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './Projects.css';
 
 const Projects = () => {
@@ -162,6 +163,13 @@ const Projects = () => {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
     >
+      <SEO
+        title="Mayank Kumar | Software Engineer Projects & Full Stack Development"
+        description="Explore software engineering projects built by Mayank Kumar (Graphic Era, TBI): BestPath (AICTE Bootcamp Winner), PrepRush AI Study Assistant, MedCare Portal, and Spring Boot REST backends. View on GitHub & LinkedIn."
+        keywords="Mayank Kumar Software engineer, Mayank Kumar Full stack Development, Mayank Kumar website, Mayank Kumar linkedin, Mayank Kumar developer linkedin, Mayank Kumar Graphic era, Mayank Kumar Projects, Mayank Kumar BestPath, Mayank Bhadani"
+        canonicalUrl="https://mayankbhadanii.dev/projects"
+      />
+
       <div className="ambient-glow proj-glow-1" style={{ top: '15%', left: '5%', width: '450px', height: '450px' }}></div>
       <div className="ambient-glow proj-glow-2" style={{ bottom: '15%', right: '5%', width: '500px', height: '500px' }}></div>
 

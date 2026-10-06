@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaAward, FaCertificate, FaUsers, FaBook, FaWrench } from 'react-icons/fa';
 import myImg from '../assets/myimg.png';
+import SEO from '../components/SEO';
 import './About.css';
 
 const About = () => {
@@ -94,6 +95,13 @@ const About = () => {
       animate="visible"
       exit="exit"
     >
+      <SEO
+        title="About Mayank Kumar | Software Engineer & MCA @ Graphic Era"
+        description="Learn more about Mayank Kumar (Mayank Bhadani) — Full Stack Software Engineer, MCA Candidate at Graphic Era University, TBI coordinator, AICTE IDE Bootcamp Winner. Connect on LinkedIn."
+        keywords="About Mayank Kumar, Mayank Kumar Graphic era, Mayank Kumar Software engineer, Mayank Kumar linkedin, Mayank Kumar developer linkedin, Mayank Kumar website, Mayank Kumar MCA Graphic Era, Mayank Bhadani, Mayank Kumar Education"
+        canonicalUrl="https://mayankbhadanii.dev/about"
+      />
+
       <div className="ambient-glow about-glow-1" style={{ top: '15%', left: '10%', width: '400px', height: '400px' }}></div>
       <div className="ambient-glow about-glow-2" style={{ top: '50%', right: '10%', width: '500px', height: '500px' }}></div>
 

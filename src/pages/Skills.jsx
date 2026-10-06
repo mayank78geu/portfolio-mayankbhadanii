@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaDatabase, FaCloud, FaBrain, FaWrench, FaBookOpen, FaFolderOpen, FaGraduationCap } from 'react-icons/fa';
+import SEO from '../components/SEO';
 import './Skills.css';
 
 const Skills = () => {
@@ -85,6 +86,13 @@ const Skills = () => {
       animate="visible"
       exit="exit"
     >
+      <SEO
+        title="Mayank Kumar | Full Stack Development & Technical Skills"
+        description="Explore Mayank Kumar's Full Stack Development stack: Java, Spring Boot, React.js, AWS Cloud, MySQL, MongoDB, AI integrations, and computer science foundations. Connect on LinkedIn."
+        keywords="Mayank Kumar Full stack Development, Mayank Kumar Software engineer, Mayank Kumar linkedin, Mayank Kumar developer linkedin, Mayank Kumar Graphic era, Mayank Kumar Java, Mayank Kumar Spring Boot, Mayank Kumar React, Mayank Bhadani"
+        canonicalUrl="https://mayankbhadanii.dev/skills"
+      />
+
       <div className="ambient-glow skills-glow-1" style={{ top: '10%', left: '5%', width: '450px', height: '450px' }}></div>
       <div className="ambient-glow skills-glow-2" style={{ bottom: '15%', right: '5%', width: '500px', height: '500px' }}></div>
 
