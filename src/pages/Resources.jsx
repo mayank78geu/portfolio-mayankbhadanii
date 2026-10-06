@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaBookOpen, 
@@ -248,16 +249,27 @@ const Resources = () => {
 
                     {/* Card Actions Footer */}
                     <div className="resource-card-footer">
-                      <a
-                        href={res.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary resource-access-btn"
-                        title={`Open ${res.title}`}
-                      >
-                        <span>Access Resource</span>
-                        <FaExternalLinkAlt size={13} />
-                      </a>
+                      {res.link.startsWith('/') ? (
+                        <Link
+                          to={res.link}
+                          className="btn btn-primary resource-access-btn"
+                          title={`Open ${res.title}`}
+                        >
+                          <span>Access Resource</span>
+                          <FaExternalLinkAlt size={13} />
+                        </Link>
+                      ) : (
+                        <a
+                          href={res.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary resource-access-btn"
+                          title={`Open ${res.title}`}
+                        >
+                          <span>Access Resource</span>
+                          <FaExternalLinkAlt size={13} />
+                        </a>
+                      )}
 
                       <button
                         type="button"

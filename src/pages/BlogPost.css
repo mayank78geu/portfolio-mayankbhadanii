@@ -1,0 +1,32 @@
+.blog-post-page {
+  position: relative;
+  width: 100%;
+}
+
+.blog-post-full-container {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 1200px) {
+  .blog-post-full-container {
+    padding: 0 36px;
+  }
+}
+
+.blog-not-found {
+  text-align: center;
+  padding: 120px 24px 80px 24px;
+}
+
+.blog-not-found h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.blog-not-found p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}

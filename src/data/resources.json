@@ -4,7 +4,7 @@
     "title": "GitHub A-Z Handbook",
     "subtitle": "Complete Git & GitHub mastery from fundamentals to production workflows",
     "description": "A comprehensive, practical handbook covering GitHub from foundational basics to advanced DevOps concepts. Includes Git branching strategies, CLI commands, pull request workflows, merge conflict resolution, CI/CD automation, and repository management for Developers and DevOps engineers.",
-    "link": "https://github-handbook.netlify.app/",
+    "link": "/blog/git-github-handbook",
     "category": "Git & DevOps",
     "badge": "Dev & DevOps",
     "icon": "github",
